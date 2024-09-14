@@ -1,0 +1,126 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.navbar-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.navbar {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  background: rgba(51, 51, 51, 0.7);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-toggle {
+  font-size: 28px;
+  color: white;
+  display: none; /* Hidden by default, only shown on mobile */
+  cursor: pointer;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.menu-2 {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar-item-head {
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navbar-item {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 540;
+  font-size: 13px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-item:hover {
+  color: #f0a500;
+}
+
+.navbar-item:active {
+  color: #ff4500;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block; /* Show the toggle button on mobile */
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(51, 51, 51, 0.9);
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .navbar-menu.active {
+    display: flex; /* Show the menu when active */
+  }
+
+  .navbar-item {
+    font-size: 16px;
+  }
+
+  .navbar-item-head {
+    margin-right: 0;
+  }
+}
