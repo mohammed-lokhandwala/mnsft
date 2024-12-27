@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+
+.reels {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    height: 100%;
+    width: 70%;
+}
+
+.reel-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reel-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+/* Red overlay on hover */
+.reel-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.5); 
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1; 
+}
+
+.reel-container:hover::before {
+    opacity: 1;
+}
+
+.reel-container::after {
+    content: "Checkout Instagram.";
+    position: absolute;
+    bottom: 50%;
+    top: 50%;
+    
+    width: 100%;
+    padding: 10px;
+
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 50px;
+    font-size: 1rem;
+    color: rgb(243, 243, 243);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 2; 
+}
+
+.reel-container:hover::after {
+    opacity: 1;
+}
+
+
+p {
+    margin-bottom: 30px;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .reels {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reel-container {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reels {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+
+    .reel-container {
+        height: 300px;
+    }
+
+    .reel-container::after {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .stats-headline h3 {
+        margin-bottom: 20px;
+    }
+    .reel-container {
+        height: 200px;
+    }
+
+    .reel-container::after {
+        font-size: 0.8rem;
+    }
+}

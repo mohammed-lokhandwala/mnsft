@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+
+
+
+
+
+
+/* General section styling */
+.testimonials-section {
+    margin-top: 80px;
+    width: 100%;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .testimonials-section h2 {
+    
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    margin-bottom: 70px;
+  }
+  
+  /* Container for all cards */
+  .testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Individual testimonial card */
+  .testimonial-card {
+    
+    background: rgb(37, 35, 35);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0.3, 0.3, 0.);
+    width: 300px;
+    padding: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    border:  1px solid black;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Image styling */
+  .testimonial-card img {
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    
+    
+  }
+  
+  /* Name styling */
+  .testimonial-card h3 {
+
+    color: rgb(47, 42, 42);
+    font-weight: 700;
+ 
+    margin-top: 15px;
+   
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  /* Text styling */
+  .testimonial-card p {
+   
+    text-align: justify;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+
+Font-weight: 450;
+
+Line-height: 24px;
+padding: 4px;
+text-align: center;
+color: rgb(27, 26, 26)
+  }
+  
+
+  .black {
+  background-color: rgb(255, 255, 255);
+
+    
+  }
+
+
+/*             */
+
+/* Center the button within its container */
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  /* Regular button styling */
+  .text-button {
+    font-size: 1rem;  /* Regular font size */
+    padding: 10px 20px;  /* Smaller padding */
+    background-color: white;
+    border: 2px solid #000;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease, border-color 0.4s ease;
+     /* Rounded corners */
+  }
+  
+  /* Add a black background on hover */
+
+  
+  /* On hover, show the black background and change text color */
+  .text-button:hover {
+    color: white;
+    border-color: white;
+    background-color: black;
+  }
+  
+  .text-container:hover{
+
+  }
+  .text-button:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+
+  .text-button{
+    padding: 15px;
+    margin-top: 30px;
+  }
+
+  .stats-headline{
+    margin-top: 50px;
+  }
+
+  .stats-headline h3{
+    
+  }

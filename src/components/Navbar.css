@@ -1,4 +1,10 @@
-/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,17 +12,24 @@
   font-family: "Montserrat", sans-serif;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
 .navbar-container {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+}
+
+/* main photo n word*/
+
+.background-photo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+
 }
 
 .background-video {
@@ -29,98 +42,122 @@ html, body {
   z-index: -1;
 }
 
+.navbar ul {
+  margin-right: 20px;
+}
+
 .navbar {
-  position: relative;
-  z-index: 1;
-  padding: 20px;
-  background: rgba(51, 51, 51, 0.7);
-  text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-logo .logo {
+  width: 60px;
+  height: auto;
 }
 
 .menu-toggle {
-  font-size: 28px;
-  color: white;
-  display: none; /* Hidden by default, only shown on mobile */
+  display: none;
+  font-size: 2rem;
+  color: #fff;
   cursor: pointer;
 }
 
 .navbar-menu {
-  list-style-type: none;
   display: flex;
+  list-style: none;
   gap: 20px;
-  transition: all 0.3s ease;
-}
-
-.menu-2 {
-  display: flex;
-  gap: 25px;
-}
-
-.navbar-item-head {
-  color: white;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
 }
 
 .navbar-item {
   color: white;
   text-transform: uppercase;
-  font-weight: 540;
-  font-size: 13px;
+  font-weight: 500;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .navbar-item:hover {
-  color: #f0a500;
+  color: #f39c12;
 }
 
-.navbar-item:active {
-  color: #ff4500;
-}
-
-.active {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Responsive styles */
-@media only screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
+/* Responsive Styles */
+@media (max-width: 1024px) {
   .menu-toggle {
-    display: block; /* Show the toggle button on mobile */
+    display: block;
   }
 
   .navbar-menu {
     display: none;
     flex-direction: column;
-    gap: 15px;
-    background: rgba(51, 51, 51, 0.9);
-    width: 100%;
-    padding: 10px;
     position: absolute;
-    top: 60px;
+    top: 100%;
     left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10;
   }
 
   .navbar-menu.active {
-    display: flex; /* Show the menu when active */
+    display: flex;
   }
 
   .navbar-item {
-    font-size: 16px;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  .navbar-item-head {
-    margin-right: 0;
+  .navbar-logo .logo {
+    width: 100px;
   }
 }
+
+@media (max-width: 768px) {
+  .navbar-item {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .navbar{
+   padding: 10px;
+  }
+  .navbar-item {
+    font-size: 0.9rem;
+  }
+
+  .navbar-logo .logo {
+    width: 50px;
+  }
+
+  .Nav-tag{
+    color: white;
+    font-size: 10px;
+  }
+
+  .high{
+    color: red;
+  }
+
+  
+}
+
+
+.navbar {
+  padding: 15px;
+  color: white;
+  font-weight: 300;
+}
+
+
+.high{
+  color: red;
+}
+

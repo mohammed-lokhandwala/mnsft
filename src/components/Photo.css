@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+
+.main{
+    background-color: rgb(48, 47, 47);
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    
+    
+    overflow: hidden;
+    
+}
+
+
+
+
+.block1{
+
+
+    color: white;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.block2{
+    
+overflow: hidden;
+    color: white;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.block1 img {
+    height: 350px;
+   width: 50%;
+    object-fit: cover;
+    
+
+   
+}
+
+.block2 img {
+
+    height: 350px;
+    width: 50%;
+    object-fit: cover;
+
+
+}
+
+
+
+
+.maintext {
+    padding: 20px;
+    width: 50%;
+    overflow: hidden;
+}
+
+.maintext h3 {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 20px;
+    font-weight:500;
+font-style:normal;
+font-variant:normal;
+font-kerning:auto;
+font-optical-sizing:auto;
+font-stretch:100%;
+font-variation-settings:normal;
+font-feature-settings:normal;
+text-transform:none;
+text-decoration: none solid rgb(255, 255, 255);
+text-align: left;
+text-indent: 0px;
+
+}
+
+.maintext span {
+    font-weight: bold;
+}
+
+.maintext p {
+    text-align: justify;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+
+Font-weight: 300;
+
+Line-height: 24px;
+text-align: left;
+color: whitesmoke
+}
+
+
+
+/* responsive part  */
+
+
+/* Tablet View */
+@media (max-width: 768px) {
+    .main {
+      flex-direction: column;
+    }
+  
+    .block1,
+    .block2 {
+      width: 100%;
+      flex-direction: column;
+    }
+  
+    .block1 img,
+    .block2 img {
+      height: 250px;
+      width: 100%;
+    }
+  
+    .maintext {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .maintext h3 {
+      font-size: 18px;
+    }
+  
+    .maintext p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  
+  /* Mobile View */
+  @media (max-width: 480px) {
+    .block1 img,
+    .block2 img {
+      height: 300px;
+    }
+  
+    .maintext {
+        margin-top: 13px;
+      width: 95%;
+      padding: 10px;
+    }
+  
+    .maintext h3 {
+      font-size: 16px;
+    }
+  
+    .maintext p {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+  
