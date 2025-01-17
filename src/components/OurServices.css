@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+*{
+  font-family: "IBM Plex Sans", serif !important;
+}
+
+
+/* Container */
+.services-container {
+  padding: 40px 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+/* Header */
+.services-header {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Cards Wrapper */
+.services-cards {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensure wrapping for smaller screens */
+}
+
+/* Individual Card */
+.service-card {
+  display: flex;
+ flex-direction: column;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Header */
+.service-title {
+  font-size: 2.6rem;
+  color: #050505;
+  font-weight: 850;
+  margin-bottom: 10px;
+}
+
+
+
+
+/* Sub-paragraph */
+.service-description {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Features List */
+.service-features {
+  list-style: none;
+  padding: 0;
+  font-size: 12px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.service-features li {
+  display: flex;
+  font-weight: 450;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.service-features .icon {
+  font-size: 1rem;
+  color: #0b0b0b;
+  margin-right: 10px;
+}
+
+/* Button */
+.service-button {
+  
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.service-button:hover {
+  background-color: #131313;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-card {
+    max-width: 100%; /* Full width for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .services-header {
+    font-size: 1.5rem;
+  }
+
+  .service-title {
+    font-size: 1.3rem;
+  }
+
+  .service-description {
+    font-size: 0.8rem;
+  }
+
+  .service-button {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+}
+
+
+/* Style for the feature list */
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.feature-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Button styling */
+.service-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.service-button:hover {
+  background-color: #000000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .feature-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .service-title {
+    font-size: 1.2rem;
+  }
+
+  .service-description {
+    font-size: 1rem;
+  }
+}

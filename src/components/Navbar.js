@@ -10,11 +10,19 @@ const Navbar = () => {
 
   return (
     <div className="navbar-container">
-     <img src="mainphoto.jpg" className="background-photo"></img>
+      <div className="image-container">
+        <img src="mainp.png" className="background-photo" alt="Background" />
+        {/* Overlay text for both desktop and mobile */}
+        <div className="overlay-text">
+        Millions of views zero ad spend <br/> organic growth done right.
+        </div>
+      </div>
 
       <nav className="navbar">
-      <div className="Nav-tag">
-          <h1 > <span className='high'>*</span> MNSFTA AGENCY</h1>
+        <div className="Nav-tag">
+          <h1>
+            <span className="high">*</span> MNSFTA AGENCY
+          </h1>
         </div>
 
         <div className="menu-toggle" onClick={toggleMenu}>
@@ -22,13 +30,11 @@ const Navbar = () => {
         </div>
 
         <ul className={`navbar-menu ${menuActive ? "active" : ""}`}>
-          <li className="navbar-item">Home</li>
-          <li className="navbar-item">Services</li>
-          <li className="navbar-item">Portfolio</li>
-          <li className="navbar-item">Clients</li>
-          <li className="navbar-item">TCU</li>
-          <li className="navbar-item">About Us</li>
-          <li className="navbar-item">Contact</li>
+          
+          <li className="navbar-item">SERVICES</li>
+        
+          <li className="navbar-item">ABOUT US</li>
+          <li className="navbar-item">BOOK A CALL</li> 
         </ul>
       </nav>
     </div>

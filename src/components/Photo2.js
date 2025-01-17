@@ -65,9 +65,7 @@ hands-on experience. </p>
 
 
         <div className='block22'>
-        <video className="kauka-video" autoPlay loop muted>
-        <source src="/maind.mp4" type="video/mp4" />
-      </video>
+       
         </div>
     </div>
   )

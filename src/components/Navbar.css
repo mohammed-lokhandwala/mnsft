@@ -1,27 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-*{
-    font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+ 
 }
 
 .navbar-container {
+  margin: 0;
+  padding: 0;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 95vh;
   overflow: hidden;
+  margin-bottom: 0;
+
 }
 
 /* main photo n word*/
 
 .background-photo{
+  margin: 0;
+  padding: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -32,15 +32,7 @@
 
 }
 
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
+
 
 .navbar ul {
   margin-right: 20px;
@@ -119,6 +111,8 @@
 }
 
 @media (max-width: 768px) {
+
+  
   .navbar-item {
     font-size: 1rem;
   }
@@ -161,3 +155,53 @@
   color: red;
 }
 
+
+
+
+/* General container for the image and overlay */
+
+.background-photo {
+  width: 100%;
+  height: 95vh;
+}
+.image-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Control the height of the gradient */
+  background: linear-gradient(to top, rgba(0, 0, 555, 0.4), rgba(0, 0, 255, 0)); /* Blue gradient */
+  pointer-events: none; /* Ensure the gradient doesn't interfere with text interactions */
+}
+
+
+/* Default styling for the overlay text (desktop view) */
+.overlay-text {
+  position: absolute;
+  color: white;
+  font-size: 24px; /* Larger text for desktop */
+  font-weight: bold;
+  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.7);
+  left: 20px; /* Align to the left */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+}
+
+/* For mobile view */
+@media (max-width: 768px) {
+
+  
+  .overlay-text{
+    text-shadow: 8px 8px 12px rgba(0, 0, 0, 0.8);
+    top: 75%;
+    left: 18%;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .navbar-container{
+    margin-bottom: 0;
+  }
+ 
+}
