@@ -1,6 +1,5 @@
-
-
-
+@media (max-width: 480px) {
+    
 /* General Styles */
 .new {
     display: flex;
@@ -60,4 +59,5 @@
   
 h3{
     margin-top: 20px;
+}
 }

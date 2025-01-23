@@ -1,0 +1,29 @@
+.video-player-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%; /* Adjusts to the size of the container */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: black; /* Background color for container */
+  position: relative; /* Required for absolute progress bar */
+}
+
+.react-player {
+  width: 100%;
+  height: 100%;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: #080808; /* Green color for the progress bar */
+  transform-origin: 0%; /* Animate from left to right */
+}

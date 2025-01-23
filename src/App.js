@@ -1,4 +1,4 @@
-
+import { motion, useScroll } from 'framer-motion';
 import './App.css';
 import Navbar from './components/Navbar.js';
 import Stats from './components/Stats.js';
@@ -12,14 +12,23 @@ import Carousel from './components/Carousel.js';
 import Reels2 from './components/Reels2.js';
 import New from './components/New.js';
 import OurServices from './components/OurServices.js';
+import VideoPlayer from "./components/VideoPlayer.js"
+import Layout from './components/Layout.js';
+import Heading from './components/Heading.js';
 function App() {
   return (
-    <div className="App">
-     <>
+    
+     <Layout>
+
      <Navbar/>
+     
      <New/>
     <Stats/>
-    <Carousel/>
+    <Heading/>
+    
+    <VideoPlayer/>
+
+    
     <Photo2/>
     <Photo/>
     <OurServices/>
@@ -30,10 +39,9 @@ function App() {
   
    <Footer/>
   
-     </>
+     </Layout>
     
     
-    </div>
   );
 }
 
